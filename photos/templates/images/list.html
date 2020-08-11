@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{%block title%}Фотки{%endblock%}
+
+
+{%block content%}
+
+    {% if images_list%}
+        {% for a in images_list %}
+            <a href="{% url 'images:detail' a.image.name %}">{{a.image.name}} <br> </a>
+        {%endfor%}
+
+    {%else%}
+        Нет фоток
+    {% endif%}
+
+    <a href="add/">Добавить фотку</a>
+
+{%endblock%}
