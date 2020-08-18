@@ -4,7 +4,16 @@
 
 
 {%block content%}
+<form  method="post" enctype="multipart/form-data">
 
+    {% csrf_token %}
+    {{form.as_p}}
     
+    <button type="submit">Отправить</button>
+</form>
+
+<img src="{{out}}" width="{{new_width}}" height="{{new_height}}">
+
+<p><a href="{% url 'images:index' %}">Назад к списку</a></p>
 
 {%endblock%}

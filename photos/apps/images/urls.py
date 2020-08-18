@@ -5,6 +5,8 @@ app_name = 'images'
 urlpatterns = [
     path('', views.index, name = 'index'),
     path('add/', views.add_photo, name = 'add_photo'),
-    path('<image_name>/', views.detail, name = 'detail')
+    path('<image_name>/', views.detail, name = 'detail'),
+    path('<img_name>/', views.descr, name = 'descr'),
     
 ]
+
