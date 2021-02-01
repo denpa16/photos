@@ -1,1 +1,1 @@
-Install "pillow" module
+Required "pillow" module
